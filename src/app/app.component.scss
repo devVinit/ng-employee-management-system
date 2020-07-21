@@ -1,0 +1,16 @@
+.mat-drawer-container {
+    height: calc(100% - 64px);
+    .mat-drawer {
+        width: 20%;
+        padding: 10px;
+        background-color: #f2f2f2;
+    }
+    .sidenav-content {
+        padding: 20px 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+}

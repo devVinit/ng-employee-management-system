@@ -1,0 +1,29 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.search-container-row {
+    display: flex;
+    align-items: center;
+    input {
+        border: none;
+        width: 429px;
+        background-color: transparent;
+        color: white;
+        font-size: 20px;
+        padding: 3px 0px;
+        font-weight: normal;
+    }
+    input:focus {
+        outline: none;
+    }
+
+    input::placeholder {
+        color: white;
+    }
+}
+
+.serch-input-border {
+    height: 1px;
+    background-color: white;
+}

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button aria-label="icon-button with menu icon" (click)="clickMenu.emit()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <div class="search-container">
+        <div class="search-container-row">
+            <input type="text" placeholder="Search Employee" />
+            <button mat-icon-button aria-label="icon button with a vertical three dot icon">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+        <div class="serch-input-border">
+        </div>
+    </div>
+</mat-toolbar>

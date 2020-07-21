@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card-list-container">
+        <mat-card *ngFor="let employee of [1, 2, 3,4 ,5 ,6, 7]" class="employee-card" matRipple>
+            <mat-card-header>
+                <div mat-card-avatar class="card-header-image"></div>
+                <mat-card-title>John Doeu</mat-card-title>
+                <mat-card-subtitle>john.doe@example.com</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div>
+                    <p class="card-content-p card-content-p-heading">Job Title :</p>
+                    <p class="card-content-p card-content-p-heading">Department :</p>
+                    <p class="card-content-p card-content-p-heading">Company :</p>
+                    <p class="card-content-p card-content-p-heading">location :</p>
+                    <p class="card-content-p card-content-p-heading">Gender:</p>
+                </div>
+                <div>
+                    <p class="card-content-p">Prodcut Manager</p>
+                    <p class="card-content-p">Critical App Development</p>
+                    <p class="card-content-p">ACME Incorparation</p>
+                    <p class="card-content-p">New York</p>
+                    <p class="card-content-p">Male</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="paginator-container">
+        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
+    </div>
+</div>
