@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +19,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { HeaderComponent } from './components/header/header.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { UtilityService } from './services/utility.service';
+import { EmployeeService } from './services/employee.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ import { FilterComponent } from './components/filter/filter.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
 
     MatToolbarModule,
     MatIconModule,
@@ -41,9 +46,10 @@ import { FilterComponent } from './components/filter/filter.component';
     MatCheckboxModule,
     MatSidenavModule,
     MatRippleModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UtilityService, EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

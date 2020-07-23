@@ -5,12 +5,15 @@
         padding: 10px;
         background-color: #f2f2f2;
     }
+    @media only screen and (max-width: 768px) {
+        .mat-drawer {
+            width: 100%;
+        }
+    }
     .sidenav-content {
         padding: 20px 5%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        position: relative;
+        justify-content: center;
     }
 }

@@ -5,12 +5,13 @@
     <span class="spacer"></span>
     <div class="search-container">
         <div class="search-container-row">
-            <input type="text" placeholder="Search Employee" />
-            <button mat-icon-button aria-label="icon button with a vertical three dot icon">
+            <input *ngIf="isDesktopMode || isSearchClicked" type="text" placeholder="Search Employee"
+                [(ngModel)]="search" (ngModelChange)="searchTerm.next($event)" />
+            <button (click)="isSearchClicked = !isSearchClicked" mat-icon-button
+                aria-label="icon button with a vertical three dot icon">
                 <mat-icon>search</mat-icon>
             </button>
         </div>
-        <div class="serch-input-border">
-        </div>
+        <div *ngIf="isDesktopMode || isSearchClicked" class="serch-input-border"></div>
     </div>
 </mat-toolbar>

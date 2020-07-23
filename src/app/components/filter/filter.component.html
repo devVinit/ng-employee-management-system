@@ -5,17 +5,10 @@
                 Job Title
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
+        <div class="checkbox-container" *ngFor="let jobTitle of employeeService.allJobTitles">
+            {{jobTitle}}
+            <mat-checkbox (change)="onSelectEmployeeAttribute('jobTitle', jobTitle, $event.checked)">
+            </mat-checkbox>
         </div>
     </mat-expansion-panel>
 </mat-accordion>
@@ -27,17 +20,10 @@
                 Department
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
+        <div class="checkbox-container" *ngFor="let department of employeeService.allDepartments">
+            {{department}}
+            <mat-checkbox (change)="onSelectEmployeeAttribute('department', department, $event.checked)">
+            </mat-checkbox>
         </div>
     </mat-expansion-panel>
 </mat-accordion>
@@ -49,17 +35,9 @@
                 Company
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
+        <div class="checkbox-container" *ngFor="let company of employeeService.allCompanies">
+            {{company}}
+            <mat-checkbox (change)="onSelectEmployeeAttribute('company', company, $event.checked)"></mat-checkbox>
         </div>
     </mat-expansion-panel>
 </mat-accordion>
@@ -71,17 +49,9 @@
                 Location
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
+        <div class="checkbox-container" *ngFor="let location of employeeService.allLocations">
+            {{location}}
+            <mat-checkbox (change)="onSelectEmployeeAttribute('location', location, $event.checked)"></mat-checkbox>
         </div>
     </mat-expansion-panel>
 </mat-accordion>
@@ -93,17 +63,9 @@
                 Gender
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
-        </div>
-        <div class="checkbox-container">
-            Product Manager
-            <mat-checkbox class="example-margin"></mat-checkbox>
+        <div class="checkbox-container" *ngFor="let gender of employeeService.allGenders">
+            {{gender}}
+            <mat-checkbox (change)="onSelectEmployeeAttribute('gender', gender, $event.checked)"></mat-checkbox>
         </div>
     </mat-expansion-panel>
 </mat-accordion>
