@@ -9,7 +9,7 @@ import { UtilityService } from 'src/app/services/utility.service';
 })
 export class FilterComponent implements OnInit {
 
-  public filterWithEmployeeAttribute = {};
+  public filterWithEmployeeAttribute: any = {};
 
   constructor(public employeeService: EmployeeService, public utilityService: UtilityService) { }
 

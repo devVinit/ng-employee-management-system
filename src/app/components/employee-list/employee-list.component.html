@@ -1,9 +1,10 @@
 <div class="container" *ngIf="(employeeList$ | async) as employeeList">
-    <div class="card-list-container">
+    <div class="card-list-container" *ngIf="employeeList.length > 0">
         <mat-card *ngFor="let employee of employeeList" class="employee-card" matRipple>
             <mat-card-header>
                 <div mat-card-avatar class="card-header-image"
                     [style]="'background-image: url('+ employee.avatar + ');'">
+                    {{!employee.avatar ? employee.firstName.charAt(0) : ''}}
                 </div>
                 <mat-card-title>{{employee.firstName}} {{employee.lastName}}</mat-card-title>
                 <mat-card-subtitle>{{employee.email}}</mat-card-subtitle>
@@ -31,6 +32,9 @@
                 </div>
             </mat-card-content>
         </mat-card>
+    </div>
+    <div *ngIf="employeeList.length === 0">
+        <img class="no-data-found-img" src="assets/no-data-found.png" />
     </div>
     <div *ngIf="(employeeList.length >= defaultPageSize) ?  true : defaultPageIndex >= 0" class="paginator-container">
         <mat-paginator [length]="100" [pageSize]="defaultPageSize" [pageIndex]="defaultPageIndex"

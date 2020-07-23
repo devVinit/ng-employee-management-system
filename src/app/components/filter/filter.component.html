@@ -2,7 +2,7 @@
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
-                Job Title
+                Job Title {{filterWithEmployeeAttribute && filterWithEmployeeAttribute?.jobTitle ? '*': ''}}
             </mat-panel-title>
         </mat-expansion-panel-header>
         <div class="checkbox-container" *ngFor="let jobTitle of employeeService.allJobTitles">
@@ -17,7 +17,7 @@
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
-                Department
+                Department {{filterWithEmployeeAttribute && filterWithEmployeeAttribute?.department ? '*': ''}}
             </mat-panel-title>
         </mat-expansion-panel-header>
         <div class="checkbox-container" *ngFor="let department of employeeService.allDepartments">
@@ -32,7 +32,7 @@
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
-                Company
+                Company {{filterWithEmployeeAttribute && filterWithEmployeeAttribute?.company ? '*': ''}}
             </mat-panel-title>
         </mat-expansion-panel-header>
         <div class="checkbox-container" *ngFor="let company of employeeService.allCompanies">
@@ -46,7 +46,7 @@
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
-                Location
+                Location {{filterWithEmployeeAttribute && filterWithEmployeeAttribute?.location ? '*': ''}}
             </mat-panel-title>
         </mat-expansion-panel-header>
         <div class="checkbox-container" *ngFor="let location of employeeService.allLocations">
@@ -60,7 +60,7 @@
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
-                Gender
+                Gender {{filterWithEmployeeAttribute && filterWithEmployeeAttribute?.gender ? '*': ''}}
             </mat-panel-title>
         </mat-expansion-panel-header>
         <div class="checkbox-container" *ngFor="let gender of employeeService.allGenders">
