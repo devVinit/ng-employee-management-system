@@ -25,7 +25,6 @@ export class EmployeeListComponent implements OnInit {
     this.employeeService.getFilterObject$().subscribe(filter => {
       this.defaultPageIndex = filter.pageNumber - 1;
       this.defaultPageSize = filter.pageSize;
-      console.log(this.defaultPageIndex, this.defaultPageSize);
     });
   }
 

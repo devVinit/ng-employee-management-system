@@ -11,7 +11,7 @@ export class FilterComponent implements OnInit {
 
   public filterWithEmployeeAttribute: any = {};
 
-  constructor(public employeeService: EmployeeService, public utilityService: UtilityService) { }
+  constructor(public employeeService: EmployeeService) { }
 
   ngOnInit(): void { }
 

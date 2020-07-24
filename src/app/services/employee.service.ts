@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { map, switchMap, filter } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { Employee } from '../models/employee.model';
 import { UtilityService } from './utility.service';
 import { HttpClient } from '@angular/common/http';

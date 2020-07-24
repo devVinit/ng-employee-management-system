@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "ng-employee-management-system"
+  "defaultProject": "ng-employee-management-system",
+  "cli": {
+    "analytics": "5e42a2f1-136c-4345-bce9-1dd741e817c7"
+  }
 }
